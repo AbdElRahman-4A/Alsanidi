@@ -9,7 +9,7 @@ const Kampa = () => {
     <div className="kampa container mx-auto px-4 py-3 sm:px-6 lg:px-8 flex items-center">
       <div className="row-all w-full flex flex-wrap">
         <div className="col-item p-3 lg:max-w-[50%] lg:basis-1/2 max-w-full basis-full ">
-          <div className="main-kampa flex bg-primary overflow-hidden rounded-lg">
+          <div className="main-kampa shadow-[0_1px_4px_1px] shadow-[#CAC9C9] flex bg-primary overflow-hidden rounded-lg">
             <div className="text-kampa bg-primary xl:basis-1/3 basis-1/2 md:px-6 px-1 text-center">
               <Image
                 src={logoKmpa1}
@@ -40,7 +40,7 @@ const Kampa = () => {
           </div>
         </div>
         <div className="col-item p-3 lg:max-w-[50%] lg:basis-1/2 max-w-full basis-full ">
-          <div className="main-kampa flex bg-primary overflow-hidden rounded-lg">
+          <div className="main-kampa shadow-[0_1px_4px_1px] shadow-[#CAC9C9] flex bg-primary overflow-hidden rounded-lg">
             <div className="text-kampa bg-primary xl:basis-1/3 basis-1/2 md:px-6 px-1 text-center">
               <Image
                 src={logoKmpa2}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import img from "/public/assets/logo-en.png";
 import { FaRegUserCircle } from "react-icons/fa";
-import { MdPhone } from "react-icons/md";
+import { MdOutlineManageAccounts, MdOutlineShoppingCart, MdPhone } from "react-icons/md";
 import { RiShoppingBasket2Line } from "react-icons/ri";
 import { LuMenu } from "react-icons/lu";
 import {
@@ -16,7 +16,11 @@ import Link from "next/link";
 import {useContext, useState } from "react";
 import CartMenu from "./cartMenu/cartMenu";
 import GlobalContext from "@/code/globalContext";
-
+import { Dock, DockIcon } from "./magicui/dock";
+import { CiHome } from "react-icons/ci";
+import { BiSolidCategoryAlt } from "react-icons/bi";
+import { FaShirt } from "react-icons/fa6";
+export type IconProps = React.HTMLAttributes<SVGElement>;
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isSubmenuOpen, setSubmenuOpen] = useState(false);
@@ -30,6 +34,7 @@ const Navbar = () => {
     setSubmenuOpen(!isSubmenuOpen);
   };
   return (
+    <>
     <div className="relative">
       <div className="container mx-auto px-4 py-5 sm:px-6 lg:px-8 flex items-center">
         {/* Logo */}
@@ -200,7 +205,44 @@ const Navbar = () => {
         ></div>
       )}
     </div>
+    <div className="absolute bottom-10 left-0 right-0">
+      <Dock direction="middle" className="bg-white">
+        <DockIcon>
+          <Icons.home className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.category className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.fashion className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.profile className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.cart className="size-6" />
+        </DockIcon>
+      </Dock>
+    </div>
+    </>
+
   );
 };
-
+const Icons = {
+  home: (props: any) => (
+    <CiHome className="text-2xl" />
+  ),
+  category: (props: any) => (
+    <BiSolidCategoryAlt />
+  ),
+  fashion: (props: any) => (
+    <FaShirt />
+  ),
+  profile: (props: any) => (
+    <MdOutlineManageAccounts />
+  ),
+  cart: (props: any) => (
+    <MdOutlineShoppingCart />
+  ),
+};
 export default Navbar;

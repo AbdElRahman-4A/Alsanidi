@@ -7,7 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Link from "next/link";
 import categories from "@/code/categories_db";
-
+import ReactFlagsSelect from "react-flags-select";
+import BlurIn from "./magicui/blur-in";
 const itemsNav = [
   {
     title: "New arrivals",
@@ -36,6 +37,7 @@ const itemsNav = [
 ];
 
 const AppBar = () => {
+  const [selected, setSelected] = useState("SA");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const handleDropdownClick = () => {
@@ -113,6 +115,13 @@ const AppBar = () => {
         <div className="icon-nav flex items-center justify-end grow  text-primary">
           <div className="flex mx-2 cursor-pointer">
             {" "}
+            {/* <BlurIn word={"Hello World"}></BlurIn> */}
+            <ReactFlagsSelect
+            fullWidth={false}
+              countries={["SA", "EG"]}
+              customLabels={{ SA: "SA", EG: "EG" }}
+              placeholder={selected}
+              onSelect={code => setSelected(code)} selected={selected}/>
             <CiGlobe className=" text-2xl mx-1" />
             <span className="mx-1">Ar</span>
           </div>

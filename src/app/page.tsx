@@ -15,7 +15,11 @@ import MultiPurposeChair from "/public/assets/Multi-Purpose-Chair.png";
 import MultiChair from "/public/assets/multiChair.png";
 import specialOffer from "/public/assets/specialOffer.png";
 import { FaHeart } from "react-icons/fa";
-
+import { Dock, DockIcon } from "@/components/magicui/dock";
+import { CiHome } from "react-icons/ci";
+import { BiSolidCategoryAlt } from "react-icons/bi";
+import { FaShirt } from "react-icons/fa6";
+import { MdOutlineManageAccounts, MdOutlineShoppingCart } from "react-icons/md";
 const DataMultiChairs = [
   {
     src: MultiPurposeChair,
@@ -54,6 +58,44 @@ const DataMultiChairs = [
     oldPrice: "250 SR",
   },
 ];
+const arabicDataMultiChairs = [
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+  {
+    src: MultiPurposeChair,
+    title: "كرسي متعدد الأغراض",
+    newPrice: "220 ريال سعودي",
+    oldPrice: "250 ريال سعودي",
+  },
+];
 
 export default function Home() {
   return (
@@ -62,7 +104,7 @@ export default function Home() {
         <Header />
         {/* Section With Discount Image */}
         <div className="container mx-auto px-4 py-5 sm:px-6 lg:px-8 flex items-center">
-          <div className="photo-discount w-full h-full flex justify-center ">
+          <div className="photo-discount w-full h-full flex justify-center shadow-[0_1px_4px_1px] shadow-[#CAC9C9] rounded-2xl ">
             <Image
               src={photoDiscount}
               className=""
@@ -354,13 +396,14 @@ export default function Home() {
         </div>
         {/* Section With Special Offer */}
         <div className="container mx-auto px-4 py-5 sm:px-6 lg:px-8 flex items-center">
-          <div className="photo-discount w-full h-full flex justify-center ">
+          <div className="photo-discount w-full h-full flex justify-center shadow-[0_1px_4px_1px] shadow-[#CAC9C9]  rounded-2xl">
             <Image
               src={specialOffer}
-              className=""
+              className="w-full"
               width={1200}
               height={420}
               alt="Special Offer"
+              
             />
           </div>
         </div>
@@ -410,6 +453,44 @@ export default function Home() {
           </div>
         </div> */}
       </div>
-    </main>
-  );
+      <div className="absolute bottom-10 left-0 right-0">
+      <Dock direction="middle" className="bg-white">
+        <DockIcon>
+          <Icons.home className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.category className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.fashion className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.profile className="size-6" />
+        </DockIcon>
+        <DockIcon>
+          <Icons.cart className="size-6" />
+        </DockIcon>
+      </Dock>
+    </div>
+</main>
+);
+  
 }
+
+const Icons = {
+  home: (props: any) => (
+    <CiHome className="text-2xl" />
+  ),
+  category: (props: any) => (
+    <BiSolidCategoryAlt />
+  ),
+  fashion: (props: any) => (
+    <FaShirt />
+  ),
+  profile: (props: any) => (
+    <MdOutlineManageAccounts />
+  ),
+  cart: (props: any) => (
+    <MdOutlineShoppingCart />
+  ),
+};

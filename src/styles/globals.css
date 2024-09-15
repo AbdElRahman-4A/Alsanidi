@@ -29,3 +29,17 @@ body {
     top: -10px;
     right:8px;
 }
+#rfs-btn{
+    padding:0;
+    border:none;
+    margin-inline-end:4px;
+    span{
+        margin:0;
+        padding:0;
+    }
+}
+#rfs-btn::after{
+    margin-left:0px;
+    
+    margin-inline-end:4px
+}
