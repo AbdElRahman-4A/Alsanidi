@@ -18,7 +18,7 @@ const G = {
       }),
     } as iUser,
   },
-  standAlonePages:['/sign_in','/sign_up'],
+  standAlonePages:['/sign-in','/sign-up'],
   cartProducts: products.slice(0,4).map(product => ({...product,quantity:1})) as iProductInCart[],
 };
 export default G;

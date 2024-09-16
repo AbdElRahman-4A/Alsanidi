@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import AppBar from "@/components/app-bar";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import G from "@/code/globalData";
 import Breadcrumb from "@/components/Breadcrumb";
 

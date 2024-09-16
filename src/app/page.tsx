@@ -107,7 +107,7 @@ export default function Home() {
           <div className="photo-discount w-full h-full flex justify-center shadow-[0_1px_4px_1px] shadow-[#CAC9C9] rounded-2xl ">
             <Image
               src={photoDiscount}
-              className=""
+              className="w-full"
               width={1200}
               height={270}
               alt="Discount"
@@ -403,7 +403,7 @@ export default function Home() {
               width={1200}
               height={420}
               alt="Special Offer"
-              
+
             />
           </div>
         </div>
@@ -454,27 +454,27 @@ export default function Home() {
         </div> */}
       </div>
       <div className="absolute bottom-10 left-0 right-0">
-      <Dock direction="middle" className="bg-white">
-        <DockIcon>
-          <Icons.home className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.category className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.fashion className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.profile className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.cart className="size-6" />
-        </DockIcon>
-      </Dock>
-    </div>
-</main>
-);
-  
+        <Dock direction="middle" className="bg-white">
+          <DockIcon>
+            <Icons.home className="size-6" />
+          </DockIcon>
+          <DockIcon>
+            <Icons.category className="size-6" />
+          </DockIcon>
+          <DockIcon>
+            <Icons.fashion className="size-6" />
+          </DockIcon>
+          <DockIcon>
+            <Icons.profile className="size-6" />
+          </DockIcon>
+          <DockIcon>
+            <Icons.cart className="size-6" />
+          </DockIcon>
+        </Dock>
+      </div>
+    </main>
+  );
+
 }
 
 const Icons = {

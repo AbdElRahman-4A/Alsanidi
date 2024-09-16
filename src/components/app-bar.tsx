@@ -74,15 +74,13 @@ const AppBar = () => {
             >
               Categories
               <IoMdArrowDropdown
-                className={`ml-1 transform transition-transform text-2xl  ${
-                  dropdownOpen ? "rotate-180" : "rotate-0"
-                }`}
+                className={`ml-1 transform transition-transform text-2xl  ${dropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
               />
             </button>
             <ul
-              className={`absolute left-0 mt-2 w-48 h-56 z-50 overflow-auto bg-white text-graySubText shadow-lg rounded-md py-2 ${
-                dropdownOpen ? "block" : "hidden"
-              }`}
+              className={`absolute left-0 mt-2 w-48 h-56 z-50 overflow-auto bg-white text-graySubText shadow-lg rounded-md py-2 ${dropdownOpen ? "block" : "hidden"
+                }`}
               style={{ scrollbarWidth: "thin", scrollbarColor: "#138AA8" }}
             >
               <li

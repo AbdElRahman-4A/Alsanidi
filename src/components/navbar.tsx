@@ -13,7 +13,7 @@ import {
   IoSearchOutline,
 } from "react-icons/io5";
 import Link from "next/link";
-import {useContext, useState } from "react";
+import { useContext, useState } from "react";
 import CartMenu from "./cartMenu/cartMenu";
 import GlobalContext from "@/code/globalContext";
 import { Dock, DockIcon } from "./magicui/dock";
@@ -78,12 +78,12 @@ const Navbar = () => {
           {/* show in phone screen */}
           <IoSearchOutline className="mx-1 text-graySubText text-2xl block lg:hidden cursor-pointer" />
           <div className="relative">
-            <button onClick={() =>  setCartMenuIsOpen(!cartMenuIsOpen)}>
+            <button onClick={() => setCartMenuIsOpen(!cartMenuIsOpen)}>
               <span className="bg-secondary text-xs h-5 w-5 leading-5 text-center text-white rounded-full absolute top-[-8px] right-[-12px]"> {G_productsInCart.length} </span>
               <RiShoppingBasket2Line className="lg:text-primary text-graySubText text-2xl grow lg:ml-8 ml-0 cursor-pointer" />
             </button>
             {
-              cartMenuIsOpen && <div className="absolute ltr:right-[-24px] rtl:left-[-24px] ltr:lg:right-0 rtl:lg:left-0 top-[30px] z-10"><CartMenu/> </div>
+              cartMenuIsOpen && <div className="absolute ltr:right-[-24px] rtl:left-[-24px] ltr:lg:right-0 rtl:lg:left-0 top-[30px] z-10"><CartMenu /> </div>
             }
           </div>
           <Link href={"./profile"} className="ml-2">
@@ -93,9 +93,8 @@ const Navbar = () => {
       </div>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 w-64 h-full overflow-auto bg-white shadow-md transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-50`}
+        className={`fixed top-0 left-0 w-64 h-full overflow-auto bg-white shadow-md transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out z-50`}
       >
         <div className="flex justify-between items-center p-4 ">
           <Image src={img} width={120} height={40} alt="logo" priority />
@@ -123,9 +122,8 @@ const Navbar = () => {
               )}
             </button>
             <ul
-              className={`pl-4 overflow-auto transition-max-height duration-500 ease-in-out ${
-                isSubmenuOpen ? "max-h-80" : "max-h-0"
-              }`}
+              className={`pl-4 overflow-auto transition-max-height duration-500 ease-in-out ${isSubmenuOpen ? "max-h-80" : "max-h-0"
+                }`}
               style={{ scrollbarWidth: "thin", scrollbarColor: "#138AA8" }}
             >
               <li className="p-2 mr-3 my-3 rounded-md  border-2 border-solid border-primary cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white text-primary font-medium">
@@ -180,12 +178,12 @@ const Navbar = () => {
               <span className="px-4">Profile</span>
             </li>
           </Link>
-          <Link href="/sign_in">
+          <Link href="/sign-in">
             <li className="py-2 border-t cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white text-primary font-medium">
               <span className="px-4">Sing in</span>
             </li>
           </Link>
-          <Link href="/sign_up">
+          <Link href="/sign-up">
             <li className="py-2 border-t cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white text-primary font-medium">
               <span className="px-4">Sing up</span>
             </li>

@@ -37,17 +37,16 @@ export default function Profile() {
                 onClick={() => setActiveTab(tab.id)}
                 role="button"
                 key={tab.id}
-                className={`cursor-pointer hover:bg-primary hover:text-white transition ease-in-out font-medium text-sm mb-4 p-3 rounded-lg flex items-center ${
-                  activeTab === tab.id
+                className={`cursor-pointer hover:bg-primary hover:text-white transition ease-in-out font-medium text-sm mb-4 p-3 rounded-lg flex items-center ${activeTab === tab.id
                     ? "bg-primary text-white"
                     : "bg-bgBrimary text-primary"
-                }`}
+                  }`}
               >
                 <DynamicBiIcons iconName={tab.icon} className="text-lg" />
                 <span className="px-3">{tab.title}</span>
               </div>
             ))}
-            <Link href="./sign_in" className="cursor-pointer bg-pinkLightColor text-redColor font-medium text-sm p-3 rounded-lg flex items-center">
+            <Link href="./sign-in" className="cursor-pointer bg-pinkLightColor text-redColor font-medium text-sm p-3 rounded-lg flex items-center">
               <DynamicBiIcons iconName="BiLogOut" className="text-lg" />
               <span className="px-3">Log Out</span>
             </Link>

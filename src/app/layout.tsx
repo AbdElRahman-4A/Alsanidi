@@ -1,6 +1,8 @@
+
 import type { Metadata } from "next";
 import LayoutContainer from "../app/layoutContainer";
 import { GlobalContextProvider } from '@/code/globalContext';
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,11 +14,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
-    <GlobalContextProvider>
-      <LayoutContainer>
+    <ClerkProvider>
+
+      <GlobalContextProvider >
+
+        <LayoutContainer>
           {children}
-      </LayoutContainer>
-    </GlobalContextProvider>
+        </LayoutContainer>
+      </GlobalContextProvider>
+    </ClerkProvider>
   );
 }
